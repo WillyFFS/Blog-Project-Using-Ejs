@@ -1,0 +1,11 @@
+<%- include("partials/header") -%>
+
+<h1>Home</h1>
+<P><%= textHome %></P>
+
+<% arrDiary.forEach(function(diary){ %>
+    <h1><%= diary.title %></h1>
+    <p><%= diary.body.substring(0,100) + "..."%><a href="posts/<%= diary.title %>">Read more</a></p> 
+<% }) %>
+
+<%- include("partials/footer") -%>
